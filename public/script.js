@@ -16,29 +16,67 @@
 
 //Obj Function Declaration
 
-const methodeMahasiswa = {
+// const methodeMahasiswa = {
 
-    makan: function (porsi) {
-        this.energi = this.energi + porsi;
-        console.log(`Halo ${this.nama}, energi mu bertambah ${porsi}, total energi mu = ${this.energi}`);
+//     makan: function (porsi) {
+//         this.energi = this.energi + porsi;
+//         console.log(`Halo ${this.nama}, energi mu bertambah ${porsi}, total energi mu = ${this.energi}`);
 
-    },
+//     },
 
-    gelud: function(jam) {
-        this.energi -= jam;
-        console.log(`Energi mu berkurang ${jam}, total energi mu sekarang ${this.energi}`);
-    }
+//     gelud: function(jam) {
+//         this.energi -= jam;
+//         console.log(`Energi mu berkurang ${jam}, total energi mu sekarang ${this.energi}`);
+//     }
+// }
+
+// function Mahasiswa(nama, energi) {
+//     let mahasiswa = Object.create(methodeMahasiswa); 
+//     mahasiswa.nama = nama;
+//     mahasiswa.energi = energi;
+
+//     return mahasiswa;
+// }
+
+// let Sigit = Mahasiswa("Sigit", 30);
+
+
+
+// Mengubah function declaration => constructor function
+function Mahasiswa(nama, energi, uang, makanan) {
+    // let mahasiswa = Object.create(methodeMahasiswa); 
+    this.nama = nama;
+    this.energi = energi;
+    this.uang = uang;
+    this.makanan = makanan;
+
+    // return mahasiswa;
 }
 
-function Mahasiswa(nama, energi) {
-    let mahasiswa = Object.create(methodeMahasiswa); 
-    mahasiswa.nama = nama;
-    mahasiswa.energi = energi;
-
-    return mahasiswa;
+Mahasiswa.prototype.makan = function(porsi) {
+    this.energi += porsi * 3;
+    this.makanan -= porsi;
+    console.log(`Halo ${this.nama}, kamu memperoleh energi sebesar ${porsi * 3}. Total energi mu sekarang ${this.energi}`);
 }
 
-let Sigit = Mahasiswa("Sigit", 30);
+Mahasiswa.prototype.gelud = function(terkuras) {
+    this.energi -= terkuras * 5;
+    this.uang += terkuras + terkuras * 3;
+
+    console.log(`Halo ${this.nama}, energi mu terkuras sebanyak ${terkuras}. Energi mu sekarang adalah ${this.energi}, uang mu bertambah menjadi ${this.uang}`);
+}
+
+Mahasiswa.prototype.topUp = function(bayar) {
+    this.uang -= bayar;
+    this.makanan += bayar * 1;
+
+    console.log(`Halo ${this.nama}, kamu telah membeli makanan sebanyak ${bayar}. Sisa uang mu sebanyak ${this.uang}`);
+}
+
+let Sigit = new Mahasiswa("Sigit", 50, 200, 0);
+
+
+
 
 
 
