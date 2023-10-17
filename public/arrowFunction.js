@@ -20,17 +20,25 @@
 // arrow function (tidak memiliki konsep "this")
 // memnambahkan umur setiap 1 detik
 
-const Character = function() {
-    this.nama = "Sigit";
-    this.umur = 33;
+// const Character = function() {
+//     this.nama = "Sigit";
+//     this.umur = 33;
 
-    this.sayHallo = function() {
-        console.log(`Hallo nama saya ${this.nama}, saya ${this.umur} tahun`);
-    }
+//     this.sayHallo = function() {
+//         console.log(`Hallo nama saya ${this.nama}, saya ${this.umur} tahun`);
+//     }
 
-    // setInterval(()=> {
-    //     console.log(this.umur++)
-    // },1000);
-}
+//     // setInterval(()=> {
+//     //     console.log(this.umur++)
+//     // },1000);
+// };
 
-const Sigit = new Character();
+// const Sigit = new Character();
+
+
+
+const box = document.getElementById("box");
+
+box.addEventListener("click", function() {
+    box.classList.toggle(``);
+});
