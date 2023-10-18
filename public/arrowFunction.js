@@ -37,8 +37,45 @@
 
 
 
-const box = document.getElementById("box");
+// const box = document.getElementById("box");
 
-box.addEventListener("click", function() {
-    box.classList.toggle(``);
-});
+// box.addEventListener("click", function() {
+//     box.classList.toggle(``);
+// });
+
+// const app = document.getElementById("app");
+
+// app.innerHTML = `<h1> Belajar Reac Bareng WPU</h1>`
+// body.appendChild('app');
+
+
+
+
+
+
+// HIGHER ORDER FUNCTIONS
+
+// for (let i = 0; i < 10 ; i++) {
+//     console.log(i);
+// }
+
+// // menggunakan function untuk membuat pengulangan lebih dinamis
+
+// function repeatLog(n) {
+//     for (let i = 0 ; i < n ; i++) {
+//         console.log(i);
+//     }
+// }
+
+// repeatLog(30);
+
+// menggunakan Higher order function untuk membuat pengulangan lebih flexible dan dinamis
+
+function repeatLog(n, action) {
+    for (let i = 0; i < n; i++) {
+        action(i);
+    }
+}
+
+repeatLog(1, alert);
+repeatLog(11, console.log);
