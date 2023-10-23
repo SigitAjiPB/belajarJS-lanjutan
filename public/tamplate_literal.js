@@ -1,3 +1,5 @@
+// const { Result } = require("postcss");
+
 const x = 10;
 console.log(`${x % 2 === 0 ? `genap` : `ganjil`}`);
 
@@ -39,6 +41,8 @@ const lagu = [
         penyanyi: 'Erik Susano',
         feat: 'RX-78-RH'
     }
+
+
 ]
 
 // const lel = `<div class=lagu">
@@ -60,3 +64,15 @@ const lul = `<div class ="lagu">
 </div>`
 
 document.body.innerHTML = lul
+
+const nama = 'Sigit Aji Primal';
+const umur = 13;
+const email = 'sigitanjrith@ggmaild.com';
+
+function coba(strings, ...values) {
+    return strings.reduce((result, str, i) => `${result}${str}<span class="hl">${values[i] || ''}</span>`, '' );
+}
+
+
+const str = coba`Hallo my name is ${nama}, i am ${umur} years old. Contact me by ${email}`;
+document.body.innerHTML = str;
