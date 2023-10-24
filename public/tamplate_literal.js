@@ -76,3 +76,4 @@ function coba(strings, ...values) {
 
 const str = coba`Hallo my name is ${nama}, i am ${umur} years old. Contact me by ${email}`;
 document.body.innerHTML = str;
+
