@@ -8,6 +8,15 @@ console.log(a);
 console.log(b);
 console.log(c);
 
+//pengulangan
+
+const bendaPadat = ['Besi', 'Batu', 'Kayu'];
+
+const [brg1, brg2, brg3] = bendaPadat;
+console.log(brg1);
+console.log(brg2);
+console.log(brg3);
+
 //object
 
 const obj = {
@@ -16,11 +25,24 @@ const obj = {
     codeNumber: 144
 }
 
-const {nama, umur, codeNumber} = obj;
+const {nama, umur, codeNumber} = obj; //nama variable harus sama dengan property nya
 
 console.log(nama);
 console.log(umur);
 console.log(codeNumber);
+
+//pengulangan
+
+const obj2 = {
+    poke: 'Darkray',
+    type: 'Dark'
+}
+
+const {poke, type} = obj2;
+
+console.log(poke);
+console.log(type);
+
 
 //Skipping Items
 
@@ -72,6 +94,20 @@ function callAllChars() {
 }
 
 callAllChars();
+
+//Pengulangan
+ const pokemons = ['Arcues', 'Giratina', 'Groudon', 'Rayquaza'];
+ const [...pokemon] = pokemons
+
+ function chatchingPokemon() {
+    for(let i = 0; i < pokemons.length; i++) {
+        console.log(`Chatching ${pokemons[i]}`);
+    }
+}
+
+chatchingPokemon();
+
+
 
 
 //Destructuring pada object tanpa deklarasi object
