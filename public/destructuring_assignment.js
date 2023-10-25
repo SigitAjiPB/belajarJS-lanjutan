@@ -164,3 +164,28 @@ console.log(primaOnly(angka));
 
 
 
+const pokeLists = {
+    fire: ['Charmender', 'Charizard', 'Blaziken', 'Growlite', 'Incineroar'],
+    grass: ['Bulbasaur', 'Venusaur', 'Leafeon', 'Snivy', 'Chesnaught'],
+    water: ['Squirtle', 'Vaporeon', 'Gyarados', 'Popplio', 'Lapras']
+}
+
+function fireOnly({fire}) {
+    return fire;
+}
+
+
+function waterOnly({water}){
+    return water;
+}
+
+function grassOnly({grass}){
+    for (let i = 0; i < grass.length; i++) {
+        console.log(`Pokemon type grass: ${grass[i]}`);
+    };
+}
+
+console.log(fireOnly(pokeLists));
+console.log(waterOnly(pokeLists));
+console.log(grassOnly(pokeLists));
+
