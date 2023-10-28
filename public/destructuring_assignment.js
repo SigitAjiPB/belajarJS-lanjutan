@@ -162,7 +162,7 @@ console.log(genapOnly(angka));
 console.log(ganjilOnly(angka));
 console.log(primaOnly(angka));
 
-
+//Pengulangan
 
 const pokeLists = {
     fire: ['Charmender', 'Charizard', 'Blaziken', 'Growlite', 'Incineroar'],
